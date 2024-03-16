@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+   
+        <h1>Odd & Even</h1>
+    <button type="button" onclick="guess()">Play</button>
+    <script>
+     function getRandomInt(n) {
+        return Math.floor(Math.random() * n);
+      }
+
+      function guess() {
+        while (true) {
+          let n = getRandomInt(10);
+          console.log(n);
+          let x = +prompt("Input x from 1 to 10 or a string for exit");
+          if (isNaN(x)) {
+            alert("Bye!");
+            return;
+          } else if (x == n) {
+            alert("Correct!");
+            return;
+          }
+          
+        }
+       
+      }
+    </script>
+</body>
+
+</html>
